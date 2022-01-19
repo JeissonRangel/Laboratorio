@@ -8,5 +8,5 @@ import java.util.List;
 
 @Repository
 public interface IPrestamoRepository extends CrudRepository<PrestamoModel, Long> {
-    public abstract List<PrestamoModel> findByIdentificacionUsuario(String IdentificacionUsuario);
+
 }

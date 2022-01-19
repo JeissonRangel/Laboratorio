@@ -22,14 +22,6 @@ public class PrestamoController {
         return this.prestamoService.crearPrestamoLibro(prestamo);
     }
 
-    @GetMapping()
-    public List<PrestamoModel> crearPrestamoLibroComplejo(@RequestParam("IdentificacionUsuario") String IdentificacionUsuario,
-                                                          @RequestParam(value = "prestamoInicial", defaultValue = "1") int registroInicial,
-                                                          @RequestParam(value = "cantidad", defaultValue = "0") int cantidadRegistros)
-    {
-        return prestamoService.obtenerPrestamosPorUsuario(IdentificacionUsuario, registroInicial, cantidadRegistros);
-    }
-
     @GetMapping(path = "/{id}")
     public Optional<PrestamoModel> obtenerUsuarioPorId(@PathVariable("id") Long id){
         return prestamoService.obtenerPrestamoPorId(id);

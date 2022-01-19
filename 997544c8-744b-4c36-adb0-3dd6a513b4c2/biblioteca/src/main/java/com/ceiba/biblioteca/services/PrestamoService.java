@@ -20,8 +20,4 @@ public class PrestamoService {
         return iPrestamoRepository.findById(Id);
     }
 
-    public List<PrestamoModel> obtenerPrestamosPorUsuario(String IdentificacionUsuario, int registroInicial, int cantidadRegistros){
-        return iPrestamoRepository.findByIdentificacionUsuario(IdentificacionUsuario).subList(registroInicial,registroInicial+cantidadRegistros);
-    }
-
 }
